@@ -3,12 +3,15 @@ const input = document.querySelector('.guess')
 const message = document.querySelector('.message')
 let scoreContent = document.querySelector('.score')
 let highScoreContent = document.querySelector('.highscore')
+const body = document.querySelector('body')
 let score = 20
 let highScore = 0
 
 
 const secretNumber = Math.trunc(Math.random() * 20) + 1
-const number = document.querySelector('.number').textContent = secretNumber;
+const number = document.querySelector('.number')
+
+ number.textContent = secretNumber;
 
 checkBtn.addEventListener('click', function() {
   const guess = Number(input.value);
@@ -17,28 +20,32 @@ checkBtn.addEventListener('click', function() {
     message.textContent = 'Not a number ⛔️'
   }else if (guess === secretNumber) {
     message.textContent = 'Congratulations, you win🏆'
-    message.style.color = "green";
+    body.style.backgroundColor = 'green'
+    // message.style.color = "green";
+    number.style.width = '30rem'
     highScore = highScore + 10
     highScoreContent.textContent = highScore
   }
   else if (guess < secretNumber) {
-    if (score > 0) {
+    if (score > 1) {
       message.textContent = 'Too Low 📉!'
-    score = score -5
+    score = score - 1
     scoreContent.textContent = score
     } else{
       message.textContent = '💥 You lost the game!!!'
+      scoreContent.textContent = 0;
     }
   }
 
   else if (guess > secretNumber) {
     
-    if (score > 0) {
+    if (score > 1) {
       message.textContent = 'Too High 📈!'
-    score = score - 5
+    score = score - 1
     scoreContent.textContent = score
     } else{
       message.textContent = '💥 You lost the game!!!'
+      scoreContent.textContent = 0;
     }
   }
   
