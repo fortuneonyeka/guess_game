@@ -22,16 +22,24 @@ checkBtn.addEventListener('click', function() {
     highScoreContent.textContent = highScore
   }
   else if (guess < secretNumber) {
-    message.textContent = 'Too Low 📉!'
-    
-    score = score -1
+    if (score > 0) {
+      message.textContent = 'Too Low 📉!'
+    score = score -5
     scoreContent.textContent = score
+    } else{
+      message.textContent = '💥 You lost the game!!!'
+    }
   }
 
   else if (guess > secretNumber) {
-    message.textContent = 'Too High 📈!'
-    score = score - 1
+    
+    if (score > 0) {
+      message.textContent = 'Too High 📈!'
+    score = score - 5
     scoreContent.textContent = score
+    } else{
+      message.textContent = '💥 You lost the game!!!'
+    }
   }
   
 });
