@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
   margin: 0;
@@ -12,9 +12,10 @@ html {
 }
 
 body {
-  font-family: 'Press Start 2P', sans-serif;
+  /* font-family: 'Press Start 2P', sans-serif; */
+  font-family: 'Press Start 2P', cursive;
   color: #eee;
-  background-color: #222;
+  background-color: gray;
   /* background-color: #60b347; */
 }
 
@@ -67,6 +68,7 @@ h1 {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
+  border-radius: 20%;
 }
 
 .between {
@@ -93,16 +95,20 @@ h1 {
   text-align: center;
   display: block;
   margin-bottom: 3rem;
+  border-radius: 20%;
 }
 
 .btn {
-  border: none;
+  /* border: none; */
   background-color: #eee;
   color: #222;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: inherit;
+  font-family: ;
+  font-weight: 300px;
   padding: 2rem 3rem;
   cursor: pointer;
+  border-radius: 20%;
 }
 
 .btn:hover {
