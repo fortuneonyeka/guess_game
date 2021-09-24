@@ -123,3 +123,11 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+.confetti{
+  max-width: 640px;
+  display: block;
+  margin: 0 auto;
+  /* border: 1px solid #ddd; */
+  user-select: none;
+}
